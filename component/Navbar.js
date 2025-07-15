@@ -14,36 +14,22 @@ const Navbar = () => {
       justifyContent: 'flex-end', 
       gap: '20px',
       padding: '10px',
-      background: '#0f0f0fff',
+      background: 'linear-gradient(to left, #41d624ff, #545953ff)',
       borderBottom: '1px solid #ccc'
     }}>
+      <h1 style={{ flex: 1, textAlign: 'left' }}>SuryaBlogs!!!</h1>
       <button 
         onClick={() => navigateTo('http://localhost:3000/')} 
         style={{
           padding: '8px 16px',
           borderRadius: '5px',
           border: 'none',
-          backgroundColor: 'black',
-          color: 'white',
+          backgroundColor: 'white',
+          color: 'black',
           cursor: 'pointer'
         }}
       >
         Home
-      </button>
-      
-
-      <button 
-        onClick={() => navigateTo('/setting')} 
-        style={{
-          padding: '8px 16px',
-          borderRadius: '5px',
-          border: 'none',
-          backgroundColor: 'black',
-          color: 'white',
-          cursor: 'pointer'
-        }}
-      >
-        About
       </button>
 
       <button 
@@ -52,12 +38,12 @@ const Navbar = () => {
           padding: '8px 16px',
           borderRadius: '5px',
           border: 'none',
-          backgroundColor: 'black',
-          color: 'white',
+          backgroundColor: 'white',
+          color: 'Black',
           cursor: 'pointer'
         }}
       >
-        User Login
+        Reader Login
       </button>
 
       <button 
@@ -66,12 +52,38 @@ const Navbar = () => {
           padding: '8px 16px',
           borderRadius: '5px',
           border: 'none',
-          backgroundColor: 'black',
-          color: 'white',
+          backgroundColor: 'white',
+          color: 'black',
           cursor: 'pointer'
         }}
       >
-        Admin Login
+        Creator Login
+      </button>
+      <button 
+        onClick={() => navigateTo('/setting')} 
+        style={{
+          padding: '8px 16px',
+          borderRadius: '5px',
+          border: 'none',
+          backgroundColor: 'white',
+          color: 'black',
+          cursor: 'pointer'
+        }}
+      >
+        About
+      </button>
+      <button 
+        onClick={() => navigateTo('http://localhost:3000/logout')} 
+        style={{
+          padding: '8px 16px',
+          borderRadius: '5px',
+          border: 'none',
+          backgroundColor: 'white',
+          color: 'black',
+          cursor: 'pointer'
+        }}
+      >
+        Logout
       </button>
     </nav>
   );

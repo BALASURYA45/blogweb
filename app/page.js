@@ -69,7 +69,7 @@ export default function Home() {
         </div>
       ) : (
         <>
-          <h1 className={styles.heading}>Welcome to the Blogs</h1>
+          <h1 className={styles.heading}>Welcome to the SuryaStory Blogs!</h1>
           <div className={styles.grid}>
             {items.map((item) => (
               <div key={item.id} className={styles.card} onClick={() => handleClick(item.id)}>

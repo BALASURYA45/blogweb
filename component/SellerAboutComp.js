@@ -9,7 +9,9 @@ const SellerAboutComp = () => {
   const [editId, setEditId] = useState(null);
 
   useEffect(() => {
-    const storedBlogs = JSON.parse(localStorage.getItem("blogItems") || "[]");
+    const storedBlogs = JSON.parse(
+      localStorage.getItem("blogItems") || "[]"
+    );
     setBlogs(storedBlogs);
   }, []);
 
@@ -54,7 +56,7 @@ const SellerAboutComp = () => {
     <div style={styles.container}>
       <div style={styles.card}>
         <h2 style={styles.heading}>
-          {editId ? 'Edit Blog Entry' : 'Add Blog Entry'}
+          {editId?'Edit Blog Entry' : 'Add Blog Entry'}
         </h2>
         <form onSubmit={handleAddOrUpdate} style={styles.form}>
           <input
