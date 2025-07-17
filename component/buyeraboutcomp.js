@@ -53,8 +53,8 @@ const BuyerAboutComp = () => {
           Meet our valued buyer: active, engaged, and loyal. This section highlights user preferences, shopping patterns, and exclusive benefits.
         </p>
         <ul style={listStyle}>
-          <li>Username: ani</li>
-          <li>Status: Gold Member</li>
+          <li>Username: Bala</li>
+          <li>Status: Platinum Member</li>
           <li>Recent Activity: Active this week</li>
         </ul>
       </div>
