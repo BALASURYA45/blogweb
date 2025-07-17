@@ -6,32 +6,20 @@ const staticItems = [
   {
     id: 1,
     name: "TypingBlog",
-    image: "https://sp.yimg.com/ib/th/id/OIP.NkA-PoURudHHbpJ0lIJt1QHaE8?pid=Api&w=148&h=148&c=7&dpr=2&rs=1",
+    image: "/image/sam1.jpeg",
     description: "Master the art of keyboard-based storytelling—tips and tricks to supercharge your blog writing skills."
   },
   {
     id: 2,
     name: "WorkingBlogger",
-    image: "https://sp.yimg.com/ib/th/id/OIP.HfqSTMxOnJqGki0AN6os8wHaE8?pid=Api&w=148&h=148&c=7&dpr=2&rs=1",
+    image: "/image/sam2.jpeg",
     description: "Your daily guide to thriving as a professional blogger—balancing creativity, productivity, and monetization."
   },
   {
     id: 3,
     name: "WorkBreak",
-    image: "https://sp.yimg.com/ib/th/id/OIP.a3sDBWsz5DPWEHL0C4NKvQHaE8?pid=Api&w=148&h=148&c=7&dpr=2&rs=1",
+    image: "/image/sam3.jpeg",
     description: "Blogger burnout? Here’s your go-to spot for refreshing break ideas and recharging your creative energy."
-  },
-  {
-    id: 4,
-    name: "ModernTech",
-    image: "https://tse1.mm.bing.net/th/id/OIP.Lw5fi5xCtYfoaG7B5qVF2QHaEK?pid=Api&P=0&h=180",
-    description: "Explore cutting-edge tools, apps, and platforms that modern bloggers rely on to stay ahead in tech."
-  },
-  {
-    id: 5,
-    name: "CodingEra",
-    image: "https://tse1.mm.bing.net/th/id/OIP.lZcTQuv69wOV10v9JtAc2wHaEK?pid=Api&P=0&h=180",
-    description: "Dive into the blogosphere’s code-friendly era—WordPress tips, coding basics, and tech tutorials for beginners."
   }
 ];
 
@@ -43,13 +31,13 @@ export default function Home() {
     const storedBlogs = localStorage.getItem("blogItems");
     const dynamicItems = storedBlogs ? JSON.parse(storedBlogs) : [];
 
-    const offsetDynamic = dynamicItems.map((item, index) => ({
+    const normalizedItems = dynamicItems.map(item => ({
       ...item,
-      id: staticItems.length + index + 1,
       name: item.title,
+      image: item.image.startsWith('/') ? item.image : '/' + item.image
     }));
 
-    setItems([...staticItems, ...offsetDynamic]);
+    setItems([...staticItems, ...normalizedItems]);
   }, []);
 
   const handleClick = (id) => {

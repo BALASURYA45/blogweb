@@ -2,6 +2,8 @@ import SellerAboutComp from "@/component/SellerAboutComp"
 
 export default function SellerSettingPage() {
   return (
-    
-  <SellerAboutComp></SellerAboutComp>)
+    <div>
+  <SellerAboutComp></SellerAboutComp>
+  </div>
+  );
 }

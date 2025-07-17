@@ -1,3 +1,4 @@
+'use client';
 const BuyerAboutComp = () => {
   const containerStyle = {
     display: 'flex',
