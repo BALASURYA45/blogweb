@@ -19,7 +19,7 @@ const Navbar = () => {
     }}>
       <h1 style={{ flex: 1, textAlign: 'left' }}>SuryaBlogs!!!</h1>
       <button 
-        onClick={() => navigateTo('http://localhost:3000/')} 
+        onClick={() => router.push('/')} 
         style={{
           padding: '8px 16px',
           borderRadius: '5px',
@@ -33,7 +33,7 @@ const Navbar = () => {
       </button>
 
       <button 
-        onClick={() => navigateTo('/login')} 
+        onClick={() => router.push('/login')} 
         style={{
           padding: '8px 16px',
           borderRadius: '5px',
@@ -47,7 +47,7 @@ const Navbar = () => {
       </button>
 
       <button 
-        onClick={() => navigateTo('http://localhost:3000/logins')} 
+        onClick={() => router.push('/logins')} 
         style={{
           padding: '8px 16px',
           borderRadius: '5px',
@@ -60,7 +60,7 @@ const Navbar = () => {
         Creator Login
       </button>
       <button 
-        onClick={() => navigateTo('/setting')} 
+        onClick={() => router.push('/setting')} 
         style={{
           padding: '8px 16px',
           borderRadius: '5px',
@@ -73,7 +73,7 @@ const Navbar = () => {
         About
       </button>
       <button 
-        onClick={() => navigateTo('http://localhost:3000/logout')} 
+        onClick={() => router.push('/logout')} 
         style={{
           padding: '8px 16px',
           borderRadius: '5px',
